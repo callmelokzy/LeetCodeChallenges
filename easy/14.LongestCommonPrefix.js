@@ -5,9 +5,18 @@ If there is no common prefix, return an empty string "".
 */
 
 // Solution
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
 var longestCommonPrefix = function(strs) {
     if (strs.length === 0) return "";
-    if (strs.length === 1) return strs[0];
+    if (strs.length === 1){
+        if (/^[a-zA-Z]+$/.test(strs[0])){
+            return strs[0];
+        }else return "";
+
+    }
 
 
     let prefix = "";
